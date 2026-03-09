@@ -305,6 +305,10 @@ Contributions are welcome! Please ensure:
 
 This project is available for educational purposes.
 
+## Video Tutorial
+
+https://drive.google.com/file/d/1T50mvaxqoquzWzEt3D2s8PbHTAXkm5rx/view?usp=sharing
+
 ## Author
 
 EmmanuelSHYIRAMBERE (emashyirambere1@gmail.com)
