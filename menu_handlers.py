@@ -4,6 +4,7 @@ Student Course Management System
 Menu handlers and user interface logic.
 """
 
+import os
 from datetime import datetime
 from colorama import Fore, Style
 
@@ -668,7 +669,8 @@ class MenuHandlers:
         save = get_user_input("\nSave report to file? (y/n): ",
                             lambda x: x.lower() in ['y', 'n'])
         if save.lower() == 'y':
-            filename = f"student_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+            os.makedirs('reports', exist_ok=True)
+            filename = f"reports/student_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
             with open(filename, 'w') as f:
                 f.write(report.generate())
             print(Fore.GREEN + f"✅ Report saved to {filename}")
@@ -682,7 +684,8 @@ class MenuHandlers:
         save = get_user_input("\nSave report to file? (y/n): ",
                             lambda x: x.lower() in ['y', 'n'])
         if save.lower() == 'y':
-            filename = f"course_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+            os.makedirs('reports', exist_ok=True)
+            filename = f"reports/course_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
             with open(filename, 'w') as f:
                 f.write(report.generate())
             print(Fore.GREEN + f"✅ Report saved to {filename}")
@@ -697,7 +700,8 @@ class MenuHandlers:
         save = get_user_input("\nSave report to file? (y/n): ",
                             lambda x: x.lower() in ['y', 'n'])
         if save.lower() == 'y':
-            filename = f"enrollment_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+            os.makedirs('reports', exist_ok=True)
+            filename = f"reports/enrollment_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
             with open(filename, 'w') as f:
                 f.write(report.generate())
             print(Fore.GREEN + f"✅ Report saved to {filename}")
